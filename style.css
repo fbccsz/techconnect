@@ -1,0 +1,245 @@
+header {
+        background-color: rgba(31, 29, 170, 0.734);
+        border-radius: 10px;
+        min-height: 80px;
+        text-align: center;
+        padding-top: 45px;
+        box-shadow: 0px 6px 195px 39px rgba(9, 72, 198, 0.75);
+}
+.texto-header{
+    position: relative;
+    top: 30%;
+    transform: translateY(-65%);
+    right: -0.7%;
+ }
+ h1{
+    color:rgb(7, 7, 252);
+    -webkit-text-stroke: #000000;
+    -webkit-text-stroke-width: 0.5px;
+    font-size: 2em;
+ }
+ #grid{
+    grid-template-columns: auto;
+    grid: repeat(1, 10px) / auto-flow;
+    background-color: rgb(21, 21, 63);
+    border-radius: 10px;
+ }
+ .floatLeft{
+    float: right;
+    margin-top: -0%;
+    margin-right: 3%;
+    transform: translateY(-520%);
+}
+#div{
+    border: 1px solid; 
+    padding: 11px 21px; 
+    vertical-align: middle; 
+    background: rgb(13, 13, 61); 
+    color:rgb(34, 0, 255);
+    border-radius:6px; 
+    font-size: 20px; 
+    font-family:helvetica, serif;
+    text-decoration:none;
+}
+#div:hover{
+    border: 1px solid; 
+    padding: 11px 21px; 
+    vertical-align: middle; 
+    background: rgb(12, 12, 122); 
+    border-radius:6px; 
+    font-size: 20px; 
+    font-family:helvetica, serif;
+    text-decoration:none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    padding: 100px;
+    background-color: rgb(7, 0, 49);
+
+}
+img{
+    display: flex;
+    transform: translateX(35%);
+    padding: 100px 20px;
+    margin: 0;
+    border-radius: 350%;
+}
+h5{
+    color: white;
+    font-family:sans-serif;
+    text-align: center;
+    transform: translateX(7.5%);
+}
+.subject {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: larger;
+  }
+  .subject2 {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    font-size: larger;
+  }
+  .animation {
+    view-timeline-name: --subjectReveal;
+    animation-timeline: --subjectReveal;
+    animation-name: appear;
+    animation-fill-mode: both;
+    animation-duration: 1ms;
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1);
+    }
+  }
+  h4{
+    color: white;
+    text-align: center;
+    margin-top: -50px;
+  }
+  .img{
+    margin-left: -500px;
+    display: block;
+  }
+  .img2{
+    transform: translateX(160%);
+    padding: 0px;
+    display: block;
+  }
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: purple; }
+}
+#grid h5 {
+    font-size: 15px;
+    animation: colorChange 5s infinite;
+}
+.fieldset-container {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.fieldset-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0599ca;
+    padding: 0 10px;
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.fieldset-content {
+    padding: 10px;
+    background-color: #0401e4;
+    border-radius: 5px;
+}
+h3 {
+    font-size: 22px;
+    color: #000000;
+    margin-top: 20px;
+}
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+strong {
+    font-weight: bold;
+}
+#sobre {
+    margin-top: 80px;
+    text-align: center;
+}
+#additionalContent {
+    font-size: 18px;
+    color: rgb(204, 15, 15);
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+#sobre {
+    justify-content: center; 
+    align-items: center;
+    height: 50vh;
+    text-align: center; 
+    padding-top: 20vh;
+}
+#sobre h4 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+.inscricao-form {
+    display: none;
+    margin-top: 20px;
+    background-color: #0c005b;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.inscricao-form h3 {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.inscricao-form input,
+.inscricao-form select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.inscricao-form label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+.inscricao-form button {
+    padding: 12px 20px;
+    background-color: #2a9df4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+.inscricao-form button:hover {
+    background-color: #2576c3;
+}
+#inscricaoForm.show {
+    display: block;
+}
+#inscricaoBtn {
+    padding: 15px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+}
+#inscricaoBtn:hover {
+    background-color: #45a049;
+}

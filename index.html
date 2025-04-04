@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <style> /* Estilo do foguete */
+        #foguete {
+            display: none;
+            width: 150px;
+            margin: 40px auto 0;
+            animation: decolar 3s ease-out forwards;
+        }
+
+        @keyframes decolar {
+            0% {
+                opacity: 0;
+                transform: translateY(0);
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-300px);
+                opacity: 0;
+            }
+        }</style>
+</head>
+<body>
+    <header>
+        <h1 class="texto-header" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">TechConnect</h1>
+        <div class="button floatLeft" id="div"><a href="#sobre">Sobre nós</a></div>
+       
+        <section id="grid">
+            <h5>Transformando sonhos em realidades.</h5>
+        </section>
+    </header>
+    <h4 class="subject" id="sobre">A <i><strong style="color: red";>TechConnect</strong></i> é uma startup inovadora dedicada a conectar profissionais de tecnologia e design através de eventos e iniciativas educacionais. Nosso objetivo é fomentar a troca de conhecimento, promover networking e impulsionar a inovação no setor.</h4>
+    <p id="additionalContent" style="display: none;">Somos apaixonados por conectar pessoas, compartilhar conhecimento e inspirar inovação no mundo da tecnologia e design.</p>
+          <!-- Foguete -->
+    <img id="foguete" src="imagens/foguete.png" alt="Foguete decolando" />
+    <br><br><br><br><br><br><br><h4 class="subject2 animation" >Em breve ocorrerá a <i style="color: red; font-size: larger;">TechFuture Summit 2025</i>
+            <br>trazendo dois palestrantes renomados:
+            <table>
+            <tr>
+            <td><img src="imagens/palestrante1.png" alt="pl1" class="img"></td>
+            <td><h4><strong><i><p>Carlos Mendes</p></i></strong><h5 style="color: aqua; margin-top: -20px;">Engenheiro de Software</h5></h4></td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+        <td><img src="imagens/palestrante2.png" alt="pl1" width="305" height="434" class="img2"></td>
+        <td><h4><strong><i style="justify-content: right;"><p>Ana Souza</p></i></strong><h5 style="color: aqua; margin-top: -20px;">Especialista em UX/UI</h5></h4></td>
+    </tr>
+    </table>
+    <section id="eventDetails" class="fieldset-container">
+        <div class="fieldset-title">Informações do Evento</div>
+        <div class="fieldset-content">
+            <h3>Data e Local</h3>
+            <p><strong>Data:</strong> 25 de Outubro de 2025</p>
+            <p><strong>Local:</strong> Centro de Convenções de São Paulo - Rua X, 123</p>
+            <h3>Resumo do Tema</h3>
+            <p>O tema do evento será "Inovação no Setor de Tecnologia e Design". Durante o evento, especialistas da indústria compartilharão suas experiências e práticas inovadoras, discutindo como a tecnologia está moldando o futuro do design e como essas áreas podem colaborar para criar soluções mais criativas e impactantes.</p>
+        <button id="inscricaoBtn">Inscreva-se agora!</button>
+
+        <form id="inscricaoForm" class="inscricao-form" action="javascript:void(0);">
+            <h3>Formulário de Inscrição</h3>
+
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+            <label for="ingresso">Tipo de Ingresso</label>
+            <select id="ingresso" name="ingresso" required>
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+            </select>
+
+            <label for="termos">
+                <input type="checkbox" id="termos" name="termos" required>
+                Aceito os termos e condições
+            </label>
+
+            <button type="submit">Enviar Inscrição</button>
+        </form>
+        </div>
+    </section>
+</body>
+<script src="header.js"></script>
+<script src="formulario.js"></script>
+<script>
+    document.querySelector('a[href="#sobre"]').addEventListener('click', function () {
+        const foguete = document.getElementById('foguete');
+
+        // Espera a rolagem e mostra o foguete
+        setTimeout(() => {
+            foguete.style.display = 'block';
+            void foguete.offsetWidth; // força reflow
+            foguete.style.animation = 'decolar 3s ease-out forwards';
+
+            // Esconde novamente após a animação
+            setTimeout(() => {
+                foguete.style.display = 'none';
+            }, 3000);
+        }, 600); // tempo para dar scroll até a seção
+    });
+</script>
+</html>
